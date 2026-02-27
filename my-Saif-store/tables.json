@@ -1,0 +1,404 @@
+[
+  {
+    "table_name": "mikro_orm_migrations"
+  },
+  {
+    "table_name": "stock_location_address"
+  },
+  {
+    "table_name": "stock_location"
+  },
+  {
+    "table_name": "inventory_item"
+  },
+  {
+    "table_name": "reservation_item"
+  },
+  {
+    "table_name": "inventory_level"
+  },
+  {
+    "table_name": "product_collection"
+  },
+  {
+    "table_name": "product_type"
+  },
+  {
+    "table_name": "product_option"
+  },
+  {
+    "table_name": "product_option_value"
+  },
+  {
+    "table_name": "product_variant_option"
+  },
+  {
+    "table_name": "product_tags"
+  },
+  {
+    "table_name": "product_tag"
+  },
+  {
+    "table_name": "product_category_product"
+  },
+  {
+    "table_name": "product_category"
+  },
+  {
+    "table_name": "image"
+  },
+  {
+    "table_name": "product"
+  },
+  {
+    "table_name": "product_variant_product_image"
+  },
+  {
+    "table_name": "product_variant"
+  },
+  {
+    "table_name": "price_set"
+  },
+  {
+    "table_name": "price_list"
+  },
+  {
+    "table_name": "price_list_rule"
+  },
+  {
+    "table_name": "price_preference"
+  },
+  {
+    "table_name": "price_rule"
+  },
+  {
+    "table_name": "price"
+  },
+  {
+    "table_name": "promotion_campaign"
+  },
+  {
+    "table_name": "promotion_promotion_rule"
+  },
+  {
+    "table_name": "promotion_rule"
+  },
+  {
+    "table_name": "application_method_target_rules"
+  },
+  {
+    "table_name": "application_method_buy_rules"
+  },
+  {
+    "table_name": "promotion_rule_value"
+  },
+  {
+    "table_name": "promotion_campaign_budget_usage"
+  },
+  {
+    "table_name": "promotion_campaign_budget"
+  },
+  {
+    "table_name": "promotion_application_method"
+  },
+  {
+    "table_name": "promotion"
+  },
+  {
+    "table_name": "customer"
+  },
+  {
+    "table_name": "customer_group"
+  },
+  {
+    "table_name": "customer_address"
+  },
+  {
+    "table_name": "customer_group_customer"
+  },
+  {
+    "table_name": "sales_channel"
+  },
+  {
+    "table_name": "cart_address"
+  },
+  {
+    "table_name": "cart_shipping_method"
+  },
+  {
+    "table_name": "cart_shipping_method_adjustment"
+  },
+  {
+    "table_name": "cart_line_item_tax_line"
+  },
+  {
+    "table_name": "cart_shipping_method_tax_line"
+  },
+  {
+    "table_name": "credit_line"
+  },
+  {
+    "table_name": "cart_line_item"
+  },
+  {
+    "table_name": "cart_line_item_adjustment"
+  },
+  {
+    "table_name": "cart"
+  },
+  {
+    "table_name": "region"
+  },
+  {
+    "table_name": "api_key"
+  },
+  {
+    "table_name": "region_country"
+  },
+  {
+    "table_name": "store"
+  },
+  {
+    "table_name": "store_currency"
+  },
+  {
+    "table_name": "store_locale"
+  },
+  {
+    "table_name": "tax_region"
+  },
+  {
+    "table_name": "tax_rate"
+  },
+  {
+    "table_name": "tax_rate_rule"
+  },
+  {
+    "table_name": "tax_provider"
+  },
+  {
+    "table_name": "currency"
+  },
+  {
+    "table_name": "payment_collection_payment_providers"
+  },
+  {
+    "table_name": "payment"
+  },
+  {
+    "table_name": "capture"
+  },
+  {
+    "table_name": "payment_session"
+  },
+  {
+    "table_name": "refund"
+  },
+  {
+    "table_name": "payment_provider"
+  },
+  {
+    "table_name": "account_holder"
+  },
+  {
+    "table_name": "payment_collection"
+  },
+  {
+    "table_name": "refund_reason"
+  },
+  {
+    "table_name": "return_reason"
+  },
+  {
+    "table_name": "order_transaction"
+  },
+  {
+    "table_name": "order_shipping"
+  },
+  {
+    "table_name": "order_change_action"
+  },
+  {
+    "table_name": "order_exchange_item"
+  },
+  {
+    "table_name": "order_claim_item"
+  },
+  {
+    "table_name": "order_claim_item_image"
+  },
+  {
+    "table_name": "order_shipping_method_tax_line"
+  },
+  {
+    "table_name": "order_shipping_method_adjustment"
+  },
+  {
+    "table_name": "order_line_item_tax_line"
+  },
+  {
+    "table_name": "return"
+  },
+  {
+    "table_name": "order_exchange"
+  },
+  {
+    "table_name": "order_claim"
+  },
+  {
+    "table_name": "return_item"
+  },
+  {
+    "table_name": "order_shipping_method"
+  },
+  {
+    "table_name": "order_item"
+  },
+  {
+    "table_name": "order_address"
+  },
+  {
+    "table_name": "order_line_item"
+  },
+  {
+    "table_name": "order_summary"
+  },
+  {
+    "table_name": "order_line_item_adjustment"
+  },
+  {
+    "table_name": "order_credit_line"
+  },
+  {
+    "table_name": "order_change"
+  },
+  {
+    "table_name": "order"
+  },
+  {
+    "table_name": "user_preference"
+  },
+  {
+    "table_name": "view_configuration"
+  },
+  {
+    "table_name": "auth_identity"
+  },
+  {
+    "table_name": "provider_identity"
+  },
+  {
+    "table_name": "invite"
+  },
+  {
+    "table_name": "user"
+  },
+  {
+    "table_name": "fulfillment_set"
+  },
+  {
+    "table_name": "service_zone"
+  },
+  {
+    "table_name": "geo_zone"
+  },
+  {
+    "table_name": "shipping_profile"
+  },
+  {
+    "table_name": "shipping_option_type"
+  },
+  {
+    "table_name": "shipping_option_rule"
+  },
+  {
+    "table_name": "fulfillment_address"
+  },
+  {
+    "table_name": "fulfillment_label"
+  },
+  {
+    "table_name": "fulfillment_item"
+  },
+  {
+    "table_name": "shipping_option"
+  },
+  {
+    "table_name": "fulfillment"
+  },
+  {
+    "table_name": "fulfillment_provider"
+  },
+  {
+    "table_name": "link_module_migrations"
+  },
+  {
+    "table_name": "workflow_execution"
+  },
+  {
+    "table_name": "notification_provider"
+  },
+  {
+    "table_name": "notification"
+  },
+  {
+    "table_name": "cart_payment_collection"
+  },
+  {
+    "table_name": "cart_promotion"
+  },
+  {
+    "table_name": "customer_account_holder"
+  },
+  {
+    "table_name": "location_fulfillment_provider"
+  },
+  {
+    "table_name": "location_fulfillment_set"
+  },
+  {
+    "table_name": "order_cart"
+  },
+  {
+    "table_name": "order_fulfillment"
+  },
+  {
+    "table_name": "order_payment_collection"
+  },
+  {
+    "table_name": "order_promotion"
+  },
+  {
+    "table_name": "return_fulfillment"
+  },
+  {
+    "table_name": "product_sales_channel"
+  },
+  {
+    "table_name": "product_shipping_profile"
+  },
+  {
+    "table_name": "product_variant_inventory_item"
+  },
+  {
+    "table_name": "product_variant_price_set"
+  },
+  {
+    "table_name": "publishable_api_key_sales_channel"
+  },
+  {
+    "table_name": "region_payment_provider"
+  },
+  {
+    "table_name": "sales_channel_stock_location"
+  },
+  {
+    "table_name": "shipping_option_price_set"
+  },
+  {
+    "table_name": "user_rbac_role"
+  },
+  {
+    "table_name": "script_migrations"
+  }
+]
