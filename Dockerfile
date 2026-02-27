@@ -20,8 +20,8 @@ WORKDIR /app/my-Saif-store
 # Install dependencies with memory optimization
 RUN npm ci --prefer-offline --no-audit --no-fund
 
-# Build the project with strict memory limits to prevent OOM
-RUN NODE_OPTIONS=--max-old-space-size=200 npm run build
+# Build the project (Hugging Face has 16GB RAM, so no memory limits needed)
+RUN npm run build
 
 # Expose the port Hugging Face Spaces expects
 EXPOSE 7860
