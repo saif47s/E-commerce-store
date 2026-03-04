@@ -1,3 +1,12 @@
+--
+title: Saif Medusa Store
+emoji: ???
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 <p align="center">
   <a href="https://www.medusajs.com">
   <picture>
@@ -74,3 +83,4 @@ Join our [Discord server](https://discord.com/invite/medusajs) to meet other com
 - [Twitter](https://twitter.com/medusajs)
 - [LinkedIn](https://www.linkedin.com/company/medusajs)
 - [Medusa Blog](https://medusajs.com/blog/)
+
