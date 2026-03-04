@@ -24,6 +24,9 @@ COPY . .
 # Build the project
 RUN DISABLE_MEDUSA_ADMIN=false npm run build
 
+# Align Admin build directory with Medusa runtime expectations
+RUN mkdir -p public && cp -r .medusa/server/public/* public/
+
 # Expose the port Hugging Face Spaces expects
 EXPOSE 7860
 
