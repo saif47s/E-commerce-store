@@ -1,14 +1,12 @@
-import { defineRouteConfig } from "@medusajs/admin-sdk"
+import { defineWidgetConfig } from "@medusajs/admin-sdk"
 import { Container, Heading, Text, Button, Input, Textarea, toast } from "@medusajs/ui"
-import { DocumentText } from "@medusajs/icons"
 import { useState, useEffect } from "react"
 
-export const config = defineRouteConfig({
-    label: "Store Content",
-    icon: DocumentText,
+export const config = defineWidgetConfig({
+    zone: "store.details.after",
 })
 
-export default function StoreContentSettings() {
+export default function StoreContentWidget() {
     const [storeId, setStoreId] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
     const [saving, setSaving] = useState(false)
@@ -25,7 +23,6 @@ export default function StoreContentSettings() {
     })
 
     useEffect(() => {
-        // Fetch the store to get the ID and existing metadata
         fetch("/admin/stores", { credentials: "include" })
             .then(res => res.json())
             .then(data => {
@@ -93,16 +90,16 @@ export default function StoreContentSettings() {
 
     if (loading) {
         return (
-            <Container>
-                <Text>Loading store data...</Text>
+            <Container className="p-8 mt-4">
+                <Text>Loading Store Content details...</Text>
             </Container>
         )
     }
 
     return (
-        <Container className="p-8 flex flex-col gap-y-8">
+        <Container className="p-8 flex flex-col gap-y-8 mt-4">
             <div>
-                <Heading level="h1" className="mb-2">Store Content Settings</Heading>
+                <Heading level="h1" className="mb-2">Website Content & Socials</Heading>
                 <Text className="text-ui-fg-subtle">
                     Manage the text content for your informational pages (About, Contact, Return Policy) and setup links for your Footer social media icons.
                 </Text>
