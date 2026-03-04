@@ -1,6 +1,6 @@
 ---
 title: Saif Medusa Store
-emoji: ???
+emoji: 🚀
 colorFrom: blue
 colorTo: indigo
 sdk: docker
