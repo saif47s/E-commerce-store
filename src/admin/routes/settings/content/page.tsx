@@ -20,7 +20,8 @@ export default function StoreContentSettings() {
         github: "",
         facebook: "",
         instagram: "",
-        twitter: ""
+        twitter: "",
+        tiktok: ""
     })
 
     useEffect(() => {
@@ -40,7 +41,8 @@ export default function StoreContentSettings() {
                             github: store.metadata.github || "",
                             facebook: store.metadata.facebook || "",
                             instagram: store.metadata.instagram || "",
-                            twitter: store.metadata.twitter || ""
+                            twitter: store.metadata.twitter || "",
+                            tiktok: store.metadata.tiktok || ""
                         })
                     }
                 }
@@ -180,6 +182,15 @@ export default function StoreContentSettings() {
                             name="twitter"
                             placeholder="https://twitter.com/..."
                             value={formData.twitter}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-y-2">
+                        <Text size="small" weight="plus">TikTok URL</Text>
+                        <Input
+                            name="tiktok"
+                            placeholder="https://tiktok.com/@..."
+                            value={formData.tiktok}
                             onChange={handleChange}
                         />
                     </div>
