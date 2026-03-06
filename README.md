@@ -1,5 +1,5 @@
 ---
-title: Saif Medusa Store
+title: Saif  Store
 emoji: 🚀
 colorFrom: blue
 colorTo: indigo
