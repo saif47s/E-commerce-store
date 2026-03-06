@@ -33,7 +33,7 @@ export default async function CheckoutLayout({
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base"
             data-testid="store-link"
           >
-            {store?.name || "Saif's Store"}
+            {store?.name || "Store"}
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

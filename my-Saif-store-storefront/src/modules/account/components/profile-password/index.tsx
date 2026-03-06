@@ -3,6 +3,7 @@
 import React, { useEffect, useActionState } from "react"
 import Input from "@modules/common/components/input"
 import AccountInfo from "../account-info"
+import { updateCustomerPassword } from "@lib/data/customer"
 import { HttpTypes } from "@medusajs/types"
 import { toast } from "@medusajs/ui"
 
@@ -12,19 +13,22 @@ type MyInformationProps = {
 
 const ProfilePassword: React.FC<MyInformationProps> = ({ customer }) => {
   const [successState, setSuccessState] = React.useState(false)
-
-  // TODO: Add support for password updates
-  const updatePassword = async () => {
-    toast.info("Password update is not implemented")
-  }
+  const [state, formAction] = useActionState(updateCustomerPassword, null)
 
   const clearState = () => {
     setSuccessState(false)
   }
 
+  useEffect(() => {
+    if (state && typeof state !== "string") {
+      setSuccessState(true)
+      toast.success("Password updated successfully")
+    }
+  }, [state])
+
   return (
     <form
-      action={updatePassword}
+      action={formAction}
       onReset={() => clearState()}
       className="w-full"
     >
@@ -34,8 +38,8 @@ const ProfilePassword: React.FC<MyInformationProps> = ({ customer }) => {
           <span>The password is not shown for security reasons</span>
         }
         isSuccess={successState}
-        isError={false}
-        errorMessage={undefined}
+        isError={!!state && typeof state === "string"}
+        errorMessage={typeof state === "string" ? state : undefined}
         clearState={clearState}
         data-testid="account-password-editor"
       >

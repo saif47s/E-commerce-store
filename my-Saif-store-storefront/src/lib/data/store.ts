@@ -32,7 +32,7 @@ export async function getStore() {
     let client;
     try {
         if (!process.env.DATABASE_URL) {
-            console.error("DATABASE_URL not defined in storefront environment")
+            console.warn("DATABASE_URL not defined in storefront environment. Fallback to API data only.")
             return { name: "Store" }
         }
 
@@ -40,11 +40,14 @@ export async function getStore() {
             connectionString: process.env.DATABASE_URL,
         })
         await client.connect()
-        const res = await client.query('SELECT name FROM "store" LIMIT 1')
+        const res = await client.query('SELECT name, metadata FROM "store" LIMIT 1')
 
         if (res.rows.length > 0) {
-            console.log("Fetched store name from DB:", res.rows[0].name)
-            return { name: res.rows[0].name }
+            console.log("Fetched store name and metadata from DB")
+            return {
+                name: res.rows[0].name,
+                metadata: res.rows[0].metadata
+            }
         }
     } catch (dbErr: any) {
         console.error("Database fallback failed in getStore:", dbErr.message || dbErr)

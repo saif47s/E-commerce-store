@@ -5,9 +5,15 @@ import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
-export const metadata: Metadata = {
-  description:
-    "A performant frontend ecommerce store built with Medusa.",
+import { getStore } from "@lib/data/store"
+
+export async function generateMetadata(): Promise<Metadata> {
+  const store = await getStore()
+
+  return {
+    title: store?.name || "Store",
+    description: store?.metadata?.description as string || "A performant frontend ecommerce starter template with Next.js 15 and Medusa.",
+  }
 }
 
 export default async function Home(props: {

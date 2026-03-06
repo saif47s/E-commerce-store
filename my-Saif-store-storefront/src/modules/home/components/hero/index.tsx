@@ -1,37 +1,32 @@
-import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 const Hero = () => {
-  const githubUrl =
-    process.env.NEXT_PUBLIC_GITHUB_PROFILE_URL || "https://github.com"
-
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
+    <div
+      className="h-[75vh] w-full border-b border-ui-border-base relative"
+      style={{ backgroundImage: "url('/hero-bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6 bg-black/[0.4]">
         <span>
           <Heading
             level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
+            className="text-5xl leading-tight text-white font-semibold mb-4 drop-shadow-lg"
           >
-            Ecommerce Starter Template
+            Discover the Best Products Here
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            className="text-2xl leading-10 text-gray-100 font-normal drop-shadow-md"
           >
-            Powered by Saif and Next.js
+            Your Ultimate Destination for Excellence.
           </Heading>
         </span>
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Button variant="secondary">
-            View on GitHub
-            <Github />
+        <LocalizedClientLink href="/store">
+          <Button variant="primary" className="font-semibold text-base !px-10 !py-6 rounded-full shadow-xl hover:scale-105 transition-all duration-300 bg-emerald-500 text-white hover:bg-emerald-600 border-none">
+            Explore Now
           </Button>
-        </a>
+        </LocalizedClientLink>
       </div>
     </div>
   )

@@ -5,10 +5,9 @@ import "styles/globals.css"
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
   title: {
-    default: "Store",
     template: "%s | Store",
+    default: "Store",
   },
-  description: "A performant frontend ecommerce store built with Medusa.",
 }
 
 export default function RootLayout(props: { children: React.ReactNode }) {

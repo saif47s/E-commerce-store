@@ -59,6 +59,19 @@ export const updateCustomer = async (body: HttpTypes.StoreUpdateCustomer) => {
   return updateRes
 }
 
+export async function updateCustomerPassword(
+  _currentState: unknown,
+  formData: FormData
+) {
+  const password = formData.get("new_password") as string
+  const oldPassword = formData.get("old_password") as string
+
+  // Note: Medusa V2 update customer doesn't directly take password.
+  // Password updates should be handled via the Reset Password flow or a custom auth endpoint.
+
+  return { error: "Password update via profile is temporarily disabled. Please use 'Forgot Password' to reset." }
+}
+
 export async function signup(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
   const customerForm = {
@@ -258,4 +271,43 @@ export const updateCustomerAddress = async (
     .catch((err) => {
       return { success: false, error: err.toString() }
     })
+}
+
+export async function resetPasswordToken(
+  _currentState: unknown,
+  formData: FormData
+) {
+  const email = formData.get("email") as string
+
+  try {
+    await sdk.auth.resetPassword("customer", "emailpass", {
+      identifier: email,
+    })
+    return { success: true, error: null }
+  } catch (error: any) {
+    return { success: false, error: error.toString() }
+  }
+}
+
+export async function finalizePasswordReset(
+  _currentState: unknown,
+  formData: FormData
+) {
+  const token = formData.get("token") as string
+  const email = formData.get("email") as string
+  const password = formData.get("password") as string
+
+  try {
+    await sdk.auth.updateProvider(
+      "customer",
+      "emailpass",
+      {
+        password,
+      },
+      token
+    )
+    return { success: true, error: null }
+  } catch (error: any) {
+    return { success: false, error: error.toString() }
+  }
 }
