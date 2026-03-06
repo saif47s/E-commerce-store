@@ -11,7 +11,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const store = await getStore()
 
   return {
-    title: store?.name || "Store",
+    title: {
+      absolute: store?.name || "Store",
+    },
     description: store?.metadata?.description as string || "A performant frontend ecommerce starter template with Next.js 15 and Medusa.",
   }
 }
