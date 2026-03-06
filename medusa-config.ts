@@ -25,9 +25,9 @@ export default defineConfig({
             resolve: "@ridoy_sarker/medusa-cloudinary/providers/cloudinary",
             id: "cloudinary",
             options: {
-              cloudName: process.env.CLOUDINARY_CLOUD_NAME || "dwe3qjw0v",
-              apiKey: process.env.CLOUDINARY_API_KEY || "443559325679963",
-              apiSecret: process.env.CLOUDINARY_API_SECRET || "uKD9saxZxLmyIZk9MeQJ2A1otjk",
+              cloudName: "dwe3qjw0v",
+              apiKey: "443559325679963",
+              apiSecret: "uKD9saxZxLmyIZk9MeQJ2A1otjk",
             },
           },
         ],
@@ -35,3 +35,5 @@ export default defineConfig({
     },
   }
 })
+
+console.log("Medusa Config loaded with Cloudinary provider.");
