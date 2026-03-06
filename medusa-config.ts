@@ -16,9 +16,22 @@ module.exports = defineConfig({
   admin: {
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true"
   },
-  modules: [
-    {
-      resolve: "./src/modules/pages",
+  modules: {
+    file: {
+      resolve: "@medusajs/file",
+      options: {
+        providers: [
+          {
+            resolve: "@ridoy_sarker/medusa-cloudinary/providers/cloudinary",
+            id: "cloudinary",
+            options: {
+              cloudName: process.env.CLOUDINARY_CLOUD_NAME || "dwe3qjw0v",
+              apiKey: process.env.CLOUDINARY_API_KEY || "443559325679963",
+              apiSecret: process.env.CLOUDINARY_API_SECRET || "uKD9saxZxLmylZk9MeQJ2A1otjk",
+            },
+          },
+        ],
+      },
     },
-  ]
+  }
 })
