@@ -16,7 +16,7 @@ COPY package*.json ./
 
 # Install dependencies with memory optimization
 # --no-audit and --no-fund save memory and time
-RUN npm ci --include=dev --prefer-offline --no-audit --no-fund
+RUN npm ci --include=dev --prefer-offline --no-audit --no-fund --legacy-peer-deps
 
 # Copy project files
 COPY . .
