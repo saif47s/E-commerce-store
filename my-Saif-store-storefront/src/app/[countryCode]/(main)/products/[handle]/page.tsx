@@ -87,17 +87,10 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   return {
-<<<<<<< Updated upstream
     title: product.title,
     description: `${product.title}`,
     openGraph: {
       title: product.title,
-=======
-    title: `${product.title} | Store`,
-    description: `${product.title}`,
-    openGraph: {
-      title: `${product.title} | Store`,
->>>>>>> Stashed changes
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
