@@ -1,0 +1,25 @@
+STOREFRONT KAISE CHALAYEN (localhost:8000)
+==========================================
+
+Option 1 - Double-click (sabse aasan)
+--------------------------------------
+  "start-storefront.bat" file par double-click karein.
+  Jab "Ready" dikhe, browser mein http://localhost:8000 open karein.
+  Window band mat karein, nahi to storefront band ho jayega.
+
+
+Option 2 - Terminal se
+--------------------------------------
+  1. Naya CMD ya PowerShell kholen (Cursor ka terminal nahi).
+  2. Ye type karein:
+
+     cd d:\Download\medusa-develop\medusa-develop\my-medusa-store-storefront
+     npm run dev
+
+  3. Jab "Ready" dikhe, browser mein http://localhost:8000 kholen.
+
+
+Zaroori
+--------------------------------------
+  - Backend (Medusa) pehle chal raha hona chahiye: http://localhost:9000
+  - Agar "connection refused" aaye to pehle start-storefront.bat chala kar 30 sec wait karein, phir 8000 open karein.

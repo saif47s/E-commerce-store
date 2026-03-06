@@ -13,6 +13,8 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
  */
 const nextConfig = {
   reactStrictMode: true,
+  // Hide dev indicator (version badge / "2 Issues" noise in development)
+  devIndicators: false,
   logging: {
     fetches: {
       fullUrl: true,
